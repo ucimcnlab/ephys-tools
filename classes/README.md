@@ -26,8 +26,11 @@ mts_obj_res = mts_obj.restrict([2 4]);
 A cell array of Mts objects, called an S-matrix, for working with the spike times from a number of cells.  
 Construct a Msmat from raw spike times:  
 ```
+% make a cell array of spike times for 10 cells
 spikes = cell(1,10);
 spikes = cellfun(@(x) rand(1,100)*10, spikes, 'UniformOutput', false);
+
+% make the S-matrix
 msmat_obj = Msmat(spikes)
 msmat_obj = 
 
